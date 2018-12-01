@@ -1,0 +1,29 @@
+#mainlogo {
+	position: absolute;
+	width: 700px;
+	height: 400px;
+	left: calc(50% - 350px);
+	top: calc(45% - 200px);
+	cursor: default;
+
+	transform-style: preserve-3d;
+
+
+	h1 {
+		color: #fff;
+		font-family: 'Roboto';
+		margin: 0;
+		font-size: 15em;
+		text-align: center;
+
+		transform: translateZ(50px);
+	}
+
+	h2 {
+		color: #fff;
+		font-family: 'Roboto';
+		margin: 0;
+		font-size: 5em;
+		text-align: center;
+	}
+}
