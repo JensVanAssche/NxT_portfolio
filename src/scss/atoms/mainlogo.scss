@@ -8,6 +8,9 @@
 
 	transform-style: preserve-3d;
 
+	&>div {
+		position: relative;
+	}
 
 	h1 {
 		color: #fff;
@@ -17,6 +20,9 @@
 		text-align: center;
 
 		transform: translateZ(50px);
+
+		animation: logo 0.1s both;
+		animation-delay: 3s;
 	}
 
 	h2 {
@@ -25,5 +31,40 @@
 		margin: 0;
 		font-size: 4em;
 		text-align: center;
+
+		animation: logo 0.1s both;
+		animation-delay: 3.2s;
 	}
+
+	.box {
+		background-color: green;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		z-index: 1;
+		transform: translateZ(50px);
+	}
+
+	.box1 {
+		animation: boxSwipe 1s both;
+		animation-delay: 2.5s;
+	}
+
+	.box2 {
+		animation: boxSwipe 1s both;
+		animation-delay: 2.7s;
+	}
+}
+
+@keyframes boxSwipe {
+	0% { left: 0; right: 100%; }
+	50% { left: 0; right: 0; }
+	100% { left: 100%; right: 0; }
+}
+
+@keyframes logo {
+	0% { visibility: hidden; }
+	100% { visibility: visible; }
 }
