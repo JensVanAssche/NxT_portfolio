@@ -1,5 +1,6 @@
-#NXT PORTFOLIO WEBSITE
+# NXT PORTFOLIO WEBSITE
 
-huh?
+Portfolio site voor de NxT richting van KdG
+Work in progress
 
-Vince = git pro
+Take it to the NxT level...
