@@ -12,10 +12,10 @@ nav {
 		margin: 0;
 
 		li {
-			margin: 0 200px;
+			margin: 0 300px;
 
 			a {
-				font-family: "Montserrat_SemiBold";
+				font-family: 'Montserrat_ExtraBold_Italic';
 				color: rgba(0, 0, 0, 0);
 				-webkit-text-stroke: 5px white;
 				font-size: 15em;
@@ -40,7 +40,8 @@ nav {
 
 				&:hover {
 					color: white;
-					transition: 0.4s;
+					transition: 0.6s;
+                   
 				}
 
 				&:hover:before {
