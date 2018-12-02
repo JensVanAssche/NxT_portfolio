@@ -38,7 +38,7 @@
 	}
 
 	.swipebox {
-		background-color: green;
+		background-color: #293699;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -77,8 +77,7 @@
 	top: 0px;
 	left: -4px;
 	width: 100%;
-	color: black;
-	text-shadow: 4px 0 black, -1px 0 yellow, -2px 0 green;
+	text-shadow: 4px 0 black, -4px 0 #293699;
 	overflow: hidden;
 	animation: crt-me 2500ms infinite linear alternate-reverse;
 
