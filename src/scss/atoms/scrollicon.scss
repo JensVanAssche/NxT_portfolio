@@ -6,6 +6,11 @@
   
   width: 34px;
   height: 55px;
+
+  &.hidden {
+    opacity: 0;
+    transition: 2s;
+  }
 }
 .mousey {
   width: 3px;
