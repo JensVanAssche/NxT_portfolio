@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>NxT Portfolio - Showcase</title>
+	
+	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div class="subpage showcase">
+		<div class="subpage_header">
+			<h1>Showcase</h1>
+			<i class="fas fa-times closepage"></i>
+		</div>
+		<div class="subpage_main">
+			<div class="showcase-element showcase-element-left">
+				<img src="src/images/pp3.jpeg">
+				<div class="showcase-element-text-right">
+					<h2>Projectnaam</h2>
+					<p>
+						Lorem ipsum dolor sit amet
+					</p>
+				</div>
+			</div>
+
+			<div class="showcase-element showcase-element-right">
+				<img src="src/images/pp4.jpg">
+				<div class="showcase-element-text-left">
+					<h2>Projectnaam</h2>
+					<p>
+						Lorem ipsum dolor sit amet
+					</p>
+				</div>
+			</div>
+
+			<div class="showcase-element showcase-element-left">
+				<img src="src/images/pp3.jpeg">
+				<div class="showcase-element-text-right">
+					<h2>Projectnaam</h2>
+					<p>
+						Lorem ipsum dolor sit amet
+					</p>
+				</div>
+			</div>
+
+			<div class="showcase-element showcase-element-right">
+				<img src="src/images/pp4.jpg">
+				<div class="showcase-element-text-left">
+					<h2>Projectnaam</h2>
+					<p>
+						Lorem ipsum dolor sit amet
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="src/js/jquery.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="src/js/tilt.js"></script>
+	<script type="text/javascript">
+		ScrollReveal().reveal('.showcase-element-left', {
+			distance: '40%',
+			origin: 'bottom',
+			opacity: 0,
+			reset: false,
+			duration: 1000,
+		});
+		ScrollReveal().reveal('.showcase-element-right', {
+			distance: '40%',
+			origin: 'bottom',
+			opacity: 0,
+			reset: false,
+			duration: 1000,
+		});
+
+		
+		VanillaTilt.init(document.querySelectorAll(".showcase-element"), {
+			max: 30,
+			speed: 800,
+			reverse: true,
+			scale: 1.05
+		});
+	</script>
+</body>
+</html>

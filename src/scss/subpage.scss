@@ -1,0 +1,10 @@
+.subpage {
+	display: flex;
+    flex-flow: column nowrap;
+    
+    .subpage_main {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+}

@@ -1,0 +1,41 @@
+.showcase-element {
+    display: flex;
+    width: 60%;
+    flex-flow: column wrap;
+    margin: 50px 0;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+    h2 {
+        font-family: "Montserrat_ExtraBold_Italic";
+        font-size: 4em;
+        text-shadow: 4px 4px 4px #464646;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.showcase-element-left {
+	align-items: flex-start;
+}
+
+.showcase-element-right {
+	align-items: flex-end;
+}
+
+.showcase-element-text-left {
+	position: relative;
+    bottom: 300px;
+    left: -600px;
+    transform: translateZ(75px);
+}
+
+.showcase-element-text-right {
+	position: relative;
+    bottom: 300px;
+    left: 600px;
+    transform: translateZ(75px);
+    max-width: 50%;
+}

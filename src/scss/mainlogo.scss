@@ -7,7 +7,7 @@
 	cursor: default;
 
 	transform-style: preserve-3d;
-	transition: 0.4s;
+	transition: 0.5s cubic-bezier(0.1, 0.1, 0.15, 1);
 
 	&>div {
 		position: relative;

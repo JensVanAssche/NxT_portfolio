@@ -1,9 +1,12 @@
-@import "_general/fonts.scss";
+@import "fonts.scss";
 
-@import "atoms/mainlogo.scss";
-@import "atoms/scrollicon.scss";
-@import "atoms/nav_items.scss";
-@import "pages/general.scss";
-@import "pages/loading.scss";
-@import "pages/pageloading.scss";
-@import "pages/hoverlock.scss";
+@import "mainlogo.scss";
+@import "scrollicon.scss";
+@import "nav.scss";
+@import "general.scss";
+@import "loading.scss";
+@import "pageloading.scss";
+@import "hoverlock.scss";
+@import "subpage.scss";
+@import "subpage_header.scss";
+@import "showcase_item.scss";
