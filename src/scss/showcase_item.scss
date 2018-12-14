@@ -27,15 +27,38 @@
 
 .showcase-element-text-left {
 	position: relative;
-    bottom: 300px;
+    bottom: 100px;
     left: -600px;
-    transform: translateZ(75px);
+    transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
 }
 
 .showcase-element-text-right {
 	position: relative;
-    bottom: 300px;
+    bottom: 100px;
     left: 600px;
-    transform: translateZ(75px);
+    transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
     max-width: 50%;
+    transition: transform 600ms ease-in-out 0s;
+}
+
+.showcase-element-background-right {
+    display: inline;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    right: -15%;
+    transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
+    background-color: #121113;
+}
+
+.showcase-element-background-left {
+    display: inline;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    left: -15%;
+    transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
+    background-color: #121113;
 }
