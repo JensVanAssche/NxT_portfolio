@@ -28,15 +28,15 @@
 
 		<nav>
 			<ul>
-				<li><a href="#" id="nav_about">About</a></li>
-				<li><a href="#" id="nav_profiles">Profiles</a></li>
-				<li><a href="#" id="nav_showcase">Showcase</a></li>
+				<li id="nav_about">About</li>
+				<li id="nav_profiles">Profiles</li>
+				<li id="nav_showcase">Showcase</li>
 			</ul>
 		</nav>
 
 		<div id="hoverlock"></div>
 		
-		<!-- <div id="waves"></div> -->
+		<div id="waves"></div>
 
 		<div id="mainlogo">
 			<div>
@@ -55,18 +55,16 @@
 		  </div>
 		  <p>Scroll down</p>
 		</div>
-
-		<div class="pageloader">
-		</div>
 	</div>
 
 
-	<script src="src/js/jquery.min.js"></script>
-	<script src="src/js/three.r92.min.js"></script>
-	<script src="src/js/vanta.waves.min.js"></script>
-	<script src="src/js/tilt.js"></script>
-	<script src="src/js/main.js"></script>
-	<script>
+	<script rel="preload" src="src/js/jquery.min.js"></script>
+	<script rel="preload" src="src/js/three.r92.min.js"></script>
+	<script rel="preload" src="src/js/vanta.waves.min.js"></script>
+	<script rel="preload" src="src/js/tilt.js"></script>
+	<script rel="preload" src="src/js/nav_scroll.js"></script>
+	<script rel="preload" src="src/js/main.js"></script>
+	<script rel="preload">
 		VANTA.WAVES({
 		  el: "#waves",
 		  color: 0x0,
