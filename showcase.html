@@ -17,19 +17,22 @@
 		</div>
 		<div class="subpage_main">
 			<div class="showcase-element showcase-element-left">
-				<img src="src/images/pp3.jpeg">
+				<div class="showcase-element-background-right"></div>
+				<img src="src/images/pp3.jpeg" class="showcase-element-img">
 				<div class="showcase-element-text-right">
-					<h2>Projectnaam</h2>
+					<h2 class="showcase-h2-right">Projectnaam</h2>
 					<p>
 						Lorem ipsum dolor sit amet
 					</p>
 				</div>
+				
 			</div>
 
 			<div class="showcase-element showcase-element-right">
-				<img src="src/images/pp4.jpg">
+				<div class="showcase-element-background-left"></div>
+				<img src="src/images/pp4.jpg" class="showcase-element-img">
 				<div class="showcase-element-text-left">
-					<h2>Projectnaam</h2>
+					<h2 class="showcase-h2-left">Projectnaam</h2>
 					<p>
 						Lorem ipsum dolor sit amet
 					</p>
@@ -37,9 +40,10 @@
 			</div>
 
 			<div class="showcase-element showcase-element-left">
-				<img src="src/images/pp3.jpeg">
+				<div class="showcase-element-background-right"></div>
+				<img src="src/images/pp3.jpeg" class="showcase-element-img">
 				<div class="showcase-element-text-right">
-					<h2>Projectnaam</h2>
+					<h2 id="example2" class="showcase-h2-right">Projectnaam</h2>
 					<p>
 						Lorem ipsum dolor sit amet
 					</p>
@@ -47,9 +51,10 @@
 			</div>
 
 			<div class="showcase-element showcase-element-right">
-				<img src="src/images/pp4.jpg">
+				<div class="showcase-element-background-left"></div>
+				<img src="src/images/pp4.jpg" class="showcase-element-img">
 				<div class="showcase-element-text-left">
-					<h2>Projectnaam</h2>
+					<h2 class="showcase-h2-left">Projectnaam</h2>
 					<p>
 						Lorem ipsum dolor sit amet
 					</p>
@@ -62,28 +67,87 @@
 	<script src="src/js/jquery.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="src/js/tilt.js"></script>
+
 	<script type="text/javascript">
-		ScrollReveal().reveal('.showcase-element-left', {
+		ScrollReveal().reveal('.showcase-element-img', {
 			distance: '40%',
 			origin: 'bottom',
 			opacity: 0,
 			reset: false,
-			duration: 1000,
+			duration: 1500,
 		});
 		ScrollReveal().reveal('.showcase-element-right', {
 			distance: '40%',
 			origin: 'bottom',
 			opacity: 0,
 			reset: false,
-			duration: 1000,
+			duration: 1500,
+		});
+		ScrollReveal().reveal('.showcase-element-left', {
+			distance: '40%',
+			origin: 'bottom',
+			opacity: 0,
+			reset: false,
+			duration: 1500,
+		});
+		ScrollReveal().reveal('.showcase-element-background-right', {
+			distance: '40%',
+			origin: 'bottom',
+			opacity: 0,
+			reset: false,
+			duration: 1500,
+		});
+		ScrollReveal().reveal('.showcase-element-background-left', {
+			distance: '40%',
+			origin: 'bottom',
+			opacity: 0,
+			reset: false,
+			duration: 1500,
 		});
 
-		
-		VanillaTilt.init(document.querySelectorAll(".showcase-element"), {
+		VanillaTilt.init(document.querySelectorAll(".showcase-element-img"), {
 			max: 30,
 			speed: 800,
 			reverse: true,
-			scale: 1.05
+			scale: 1,
+			glare: true
+		});
+		
+		/* On scroll text trager laten bewegen */
+		$(window).scroll(function(){
+			rightTextElements = document.getElementsByClassName('showcase-element-text-right');
+			righth2Elements = document.getElementsByClassName('showcase-h2-right');
+
+			for (var i=0; i < rightTextElements.length; i++) {
+				rightTextElement = $(rightTextElements[i]);
+				offset = rightTextElement.offset();
+				$(righth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/5) + "px"});
+			}
+
+			leftTextElements = document.getElementsByClassName('showcase-element-text-left');
+			lefth2Elements = document.getElementsByClassName('showcase-h2-left');
+
+			for (var i=0; i < leftTextElements.length; i++) {
+				leftTextElement = $(leftTextElements[i]);
+				offset = leftTextElement.offset();
+				$(lefth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/5) + "px"});
+			}
+
+			leftBackgrounds = document.getElementsByClassName('showcase-element-background-left');
+
+			for (var i=0; i < leftBackgrounds.length; i++) {
+				leftBackground = $(leftBackgrounds[i]);
+				offset = leftBackground.offset();
+				$(leftBackgrounds[i]).css({"margin-left":(-(offset.top - $(document).scrollTop())/10) + "px"});
+			}
+
+			rightBackgrounds = document.getElementsByClassName('showcase-element-background-right');
+
+			for (var i=0; i < leftBackgrounds.length; i++) {
+				rightBackground = $(rightBackgrounds[i]);
+				offset = rightBackground.offset();
+				$(rightBackgrounds[i]).css({"margin-right":(-(offset.top - $(document).scrollTop())/10) + "px"});
+			}
 		});
 	</script>
 </body>
