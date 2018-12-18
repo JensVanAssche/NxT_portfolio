@@ -5,9 +5,8 @@ $("#mainlogo h1").clone().appendTo(".glitch-window");
 
 // on showcase click
 $("#nav_showcase").click(function() {
-	$("#nav_showcase").animate({
-		left: 0
-	}, 1000, function() {
-		// Animation complete.
-	});
+	$("#pageloader").addClass("active_animate");
+	setTimeout(function() {
+		window.location.href = "showcase.html";
+	}, 1000);
 });

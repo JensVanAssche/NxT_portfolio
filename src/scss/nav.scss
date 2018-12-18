@@ -19,12 +19,27 @@ nav {
 			font-size: 15em;
 			text-decoration: none;
 			position: relative;
-			transition: 0.4s;
+			transition: 0.5s;
+			cursor: pointer;
 
-			&:hover {
+			&:before {
+				top: 0;
+				left: 0;
+				width: 0;
 				color: white;
-				transition: 0.6s;
-				cursor: pointer;
+				overflow: hidden;
+				position: absolute;
+				content: attr(data-text);
+				transition: all 0.5s;
+			}
+			  
+			&:hover {
+				padding: 20px 40px;
+				margin-right: 220px;
+				&:before {
+					padding: 0 20px;
+					width: 100%;
+				}
 			}
 		}
 	}

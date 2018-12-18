@@ -26,11 +26,13 @@
 			</div>
 		</div>
 
+		<div id="pageloader" class="inactive"></div>
+
 		<nav>
 			<ul>
-				<li id="nav_about">About</li>
-				<li id="nav_profiles">Profiles</li>
-				<li id="nav_showcase">Showcase</li>
+				<li id="nav_about" data-text="About">About</li>
+				<li id="nav_profiles" data-text="Profiles">Profiles</li>
+				<li id="nav_showcase" data-text="Showcase">Showcase</li>
 			</ul>
 		</nav>
 
@@ -66,13 +68,12 @@
 	<script rel="preload" src="src/js/main.js"></script>
 	<script rel="preload">
 		VANTA.WAVES({
-		  el: "#waves",
-		  color: 0x0,
-		  shininess: 41.00,
-		  waveHeight: 40.00,
-		  waveSpeed: 0.70,
-		  zoom: 0.7,
-		  backgroundAlpha: 1.00,
+			el: "#waves",
+			color: 0x9,
+			shininess: 40.00,
+			waveHeight: 40.00,
+			waveSpeed: 0.80,
+			zoom: 1
 		})
 
 		VanillaTilt.init(document.querySelector("#mainlogo"), {

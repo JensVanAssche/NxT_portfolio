@@ -1,0 +1,39 @@
+#pageloader {
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+    z-index: 10;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.active_animate {
+        animation: fadeIn 1s both;
+    }
+
+    &.inactive {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.inactive_animate {
+        animation: fadeOut 1s both;
+    }
+}
+
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	99% { visibility: visible; }
+	100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; visibility: hidden; }
+	1% { visibility: visible; }
+	100% { opacity: 1; visibility: visible; }
+}

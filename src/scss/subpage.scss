@@ -1,6 +1,7 @@
 .subpage {
 	display: flex;
     flex-flow: column nowrap;
+    z-index: 2;
     
     .subpage_main {
         display: flex;
