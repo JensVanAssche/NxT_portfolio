@@ -8,12 +8,19 @@
 	
 	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<style>
+		#net {
+			position: fixed;
+		}
+	</style>
 </head>
 <body>
+	<div id="net"></div>
+	<div id="pageloader" class="active"></div>
 	<div class="subpage showcase">
 		<div class="subpage_header">
 			<h1>Showcase</h1>
-			<i class="fas fa-times closepage"></i>
 		</div>
 		<div class="subpage_main">
 			<div class="showcase-element showcase-element-left">
@@ -66,9 +73,23 @@
 
 	<script src="src/js/jquery.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="src/js/three.r92.min.js"></script>
+	<script src="src/js/vanta.net.min.js"></script>
 	<script src="src/js/tilt.js"></script>
 
 	<script type="text/javascript">
+		window.onload = function() {
+			$("#pageloader").addClass("inactive_animate");
+			$("#pageloader").removeClass("active");
+		}
+
+		VANTA.NET({
+			el: "#net",
+			color: 0x7b9aff,
+			backgroundColor: 0x4040f,
+			maxDistance: 24.00,
+			spacing: 20.00
+		});
 		ScrollReveal().reveal('.showcase-element-img', {
 			distance: '40%',
 			origin: 'bottom',
@@ -106,10 +127,10 @@
 		});
 
 		VanillaTilt.init(document.querySelectorAll(".showcase-element-img"), {
-			max: 30,
+			max: 10,
 			speed: 800,
 			reverse: true,
-			scale: 1,
+			scale: 1.05,
 			glare: true
 		});
 		

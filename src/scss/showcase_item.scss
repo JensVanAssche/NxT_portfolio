@@ -10,6 +10,37 @@
         font-family: "Montserrat_ExtraBold_Italic";
         font-size: 4em;
         text-shadow: 4px 4px 4px #464646;
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 10px;
+            top: 50%;
+            margin-top: -0.5px;
+            background: #293699;
+        }
+
+        &:before {
+            left: -20px;
+        }
+
+        &:after {
+            right: -20px;
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        &:hover:before {
+            width: calc(100% + 40px);
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        &:hover:after {
+            background: transparent;
+            width: calc(100% + 40px);
+            transition: 0s;
+        }
     }
 
     p {
@@ -49,7 +80,7 @@
     top: 50px;
     right: -15%;
     transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
-    background-color: #282828;
+    background-color: rgba($color: #282828, $alpha: 0.75);
 }
 
 .showcase-element-background-left {
@@ -60,5 +91,5 @@
     top: 50px;
     left: -15%;
     transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
-    background-color: #282828;
+    background-color: rgba($color: #282828, $alpha: 0.75);
 }

@@ -1,9 +1,33 @@
 .subpage_header {
 	text-align: center;
-    padding: 100px 0 200px 0;
+    padding: 100px 0 150px 0;
+    z-index: 1;
     
     h1 {
         font-family: "Montserrat_ExtraBold_Italic";
-        font-size: 9em;
+        font-size: 10em;
+        display: inline-block;
+        width: 0;
+
+        overflow: hidden;
+        border-right: .15em solid #293699;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+        typing 1.5s steps(8, end) both,
+        blink-caret .9s step-end infinite;
+        animation-delay: 1.2s;
     }
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 900px }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #293699; }
 }
