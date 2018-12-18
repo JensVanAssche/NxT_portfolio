@@ -10,13 +10,13 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 	<style>
-		#net {
+		#waves {
 			position: fixed;
 		}
 	</style>
 </head>
 <body>
-	<div id="net"></div>
+	<div id="waves"></div>
 	<div id="pageloader" class="active"></div>
 	<div class="subpage showcase">
 		<div class="subpage_header">
@@ -74,7 +74,7 @@
 	<script src="src/js/jquery.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="src/js/three.r92.min.js"></script>
-	<script src="src/js/vanta.net.min.js"></script>
+	<script src="src/js/vanta.waves.min.js"></script>
 	<script src="src/js/tilt.js"></script>
 
 	<script type="text/javascript">
@@ -83,13 +83,14 @@
 			$("#pageloader").removeClass("active");
 		}
 
-		VANTA.NET({
-			el: "#net",
-			color: 0x7b9aff,
-			backgroundColor: 0x4040f,
-			maxDistance: 24.00,
-			spacing: 20.00
-		});
+		VANTA.WAVES({
+			el: "#waves",
+			color: 0x9,
+			shininess: 40.00,
+			waveHeight: 40.00,
+			waveSpeed: 0.80,
+			zoom: 1
+		})
 		ScrollReveal().reveal('.showcase-element-img', {
 			distance: '40%',
 			origin: 'bottom',
