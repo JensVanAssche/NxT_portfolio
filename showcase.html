@@ -24,7 +24,7 @@
 		</div>
 		<div class="subpage_main">
 			<div class="showcase-element showcase-element-left">
-				<div class="showcase-element-background-right"></div>
+				<!-- <div class="showcase-element-background-right"></div> -->
 				<img src="src/images/pp3.jpeg" class="showcase-element-img">
 				<div class="showcase-element-text-right">
 					<h2 class="showcase-h2-right">Projectnaam</h2>
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="showcase-element showcase-element-right">
-				<div class="showcase-element-background-left"></div>
+				<!-- <div class="showcase-element-background-left"></div> -->
 				<img src="src/images/pp4.jpg" class="showcase-element-img">
 				<div class="showcase-element-text-left">
 					<h2 class="showcase-h2-left">Projectnaam</h2>
@@ -47,7 +47,7 @@
 			</div>
 
 			<div class="showcase-element showcase-element-left">
-				<div class="showcase-element-background-right"></div>
+				<!-- <div class="showcase-element-background-right"></div> -->
 				<img src="src/images/pp3.jpeg" class="showcase-element-img">
 				<div class="showcase-element-text-right">
 					<h2 id="example2" class="showcase-h2-right">Projectnaam</h2>
@@ -58,7 +58,7 @@
 			</div>
 
 			<div class="showcase-element showcase-element-right">
-				<div class="showcase-element-background-left"></div>
+				<!-- <div class="showcase-element-background-left"></div> -->
 				<img src="src/images/pp4.jpg" class="showcase-element-img">
 				<div class="showcase-element-text-left">
 					<h2 class="showcase-h2-left">Projectnaam</h2>
@@ -143,7 +143,7 @@
 			for (var i=0; i < rightTextElements.length; i++) {
 				rightTextElement = $(rightTextElements[i]);
 				offset = rightTextElement.offset();
-				$(righth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/5) + "px"});
+				$(righth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/4) + "px"});
 			}
 
 			leftTextElements = document.getElementsByClassName('showcase-element-text-left');
@@ -152,7 +152,7 @@
 			for (var i=0; i < leftTextElements.length; i++) {
 				leftTextElement = $(leftTextElements[i]);
 				offset = leftTextElement.offset();
-				$(lefth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/5) + "px"});
+				$(lefth2Elements[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/4) + "px"});
 			}
 
 			leftBackgrounds = document.getElementsByClassName('showcase-element-background-left');
