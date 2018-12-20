@@ -11,6 +11,7 @@
         font-size: 4em;
         text-shadow: 4px 4px 4px #464646;
         position: relative;
+        margin-bottom: 0;
 
         &:before, &:after {
             content: '';
@@ -19,7 +20,7 @@
             height: 10px;
             top: 50%;
             margin-top: -0.5px;
-            background: #293699;
+            background: #293699; //kleur lijntje
         }
 
         &:before {
