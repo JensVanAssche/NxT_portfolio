@@ -12,7 +12,7 @@
 	<style>
 		#waves {
 			position: fixed;
-            opacity: 0.2;
+            opacity: 0.5;
 		}
 	</style>
 </head>
@@ -73,11 +73,11 @@
 	</div>
 	
 	<div class="scroll-downs">
-		  <div class="mousey">
-		    <div class="scroller"></div>
-		  </div>
-		  <p>Scroll down</p>
+		<div class="mousey">
+			<div class="scroller"></div>
 		</div>
+		<p>Scroll down</p>
+	</div>
 
 
 	<script src="src/js/jquery.min.js"></script>
@@ -148,6 +148,8 @@
 		$(window).scroll(function(){
 			rightTextElements = document.getElementsByClassName('showcase-element-text-right');
 			righth2Elements = document.getElementsByClassName('showcase-h2-right');
+
+			$(".scroll-downs").addClass("hidden");
 
 			for (var i=0; i < rightTextElements.length; i++) {
 				rightTextElement = $(rightTextElements[i]);
