@@ -12,8 +12,9 @@
     h1 {
         font-family: "Montserrat_ExtraBold_Italic";
         font-size: 10em;
-        
-        margin: 0 auto;
+        letter-spacing: 3px;
+        display: inline-block;
+        width: 0;
         overflow: hidden;
         border-right: .15em solid #293699;
         white-space: nowrap;
