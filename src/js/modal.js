@@ -42,7 +42,7 @@ select_modals_btns.forEach(function(element, index) {
     catch(err) {
       console.log("Modal van dit project is nog niet gemaakt");
     }
-    $('body').css('overflow', 'visible');
+    $('body').css('overflow', 'hidden');
   });
 });
 
