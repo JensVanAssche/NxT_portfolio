@@ -1,54 +1,77 @@
-var modal = document.getElementById('modal-1');
-var modal_btn = document.getElementById('showcase-element-1');
-var btn = document.getElementById("cancel_btn");
+var cancel_btns = document.querySelectorAll(".cancel_btn");
+var all_modals = document.querySelectorAll(".modal");
+var select_modals_btns = document.querySelectorAll(".showcase-element");
+var all_modal_image_boxes = document.querySelectorAll(".modal-image-box");
 
-btn.onclick = function() {
-  modal.style.display = "none";
-  $('body').css('overflow', 'visible');
-}
+///// IMAGES /////
 
-modal_btn.onclick = function() {
-  modal.style.display = "flex";
-  $('body').css('overflow', 'hidden');
-}
+var images_modals = [
+  ["pp3.jpeg","pp4.jpg","project-photo-3.jpeg"],
+  ["pp4.jpg","pp5.jpg","pp2.png"],
+  ["pp6.jpeg","pp7.jpeg","pp8.jpeg"],
+  ["pp9.jpeg","pp10.jpeg","pp11.jpeg"],
+];
 
-let circle1 = document.getElementById("circle1");
-let circle2 = document.getElementById("circle2");
-let circle3 = document.getElementById("circle3");
-let image_box_1 = document.getElementById("image-box-1")
+var image_path = "src/images/";
 
-circle1.addEventListener("click", function() {
-  circle1.classList.add("circle_active");
-  if (circle2.classList.contains('circle_active')) {
-    circle2.classList.remove('circle_active');
-  }
-  if (circle3.classList.contains('circle_active')) {
-    circle3.classList.remove('circle_active');
-  }
-  image_box_1.style.background = 'url("src/images/pp3.jpeg")';
-  image_box_1.style.backgroundSize = 'cover';
+// standaard achtergrond per modal
+all_modal_image_boxes[0].style.backgroundImage = 'url('+image_path+images_modals[0][0]+')';
+all_modal_image_boxes[1].style.backgroundImage = 'url('+image_path+images_modals[1][0]+')';
+all_modal_image_boxes[2].style.backgroundImage = 'url('+image_path+images_modals[2][0]+')';
+all_modal_image_boxes[3].style.backgroundImage = 'url('+image_path+images_modals[3][0]+')';
+
+// when cancel clicked
+cancel_btns.forEach(function(button, index) {
+  button.addEventListener("click", function() {
+    cancelClicked(index);
+    $('body').css('overflow', 'visible');
+  });
 });
 
-circle2.addEventListener("click", function() {
-  circle2.classList.add("circle_active");
-  if (circle1.classList.contains('circle_active')) {
-    circle1.classList.remove('circle_active');
-  }
-  if (circle3.classList.contains('circle_active')) {
-    circle3.classList.remove('circle_active');
-  }
-  image_box_1.style.background = 'url("src/images/pp4.jpg")';
-  image_box_1.style.backgroundSize = 'cover';
+function cancelClicked(index) {
+  all_modals[index].style.display = "none";
+}
+
+
+// onclick project van showcase modal laten zien
+select_modals_btns.forEach(function(element, index) {
+  element.addEventListener("click", function() {
+    try {
+      all_modals[index].style.display = "flex";
+    }
+    catch(err) {
+      console.log("Modal van dit project is nog niet gemaakt");
+    }
+    $('body').css('overflow', 'visible');
+  });
 });
 
-circle3.addEventListener("click", function() {
-  circle3.classList.add("circle_active");
-  if (circle1.classList.contains('circle_active')) {
-    circle1.classList.remove('circle_active');
-  }
-  if (circle2.classList.contains('circle_active')) {
-    circle2.classList.remove('circle_active');
-  }
-  image_box_1.style.background = 'url("src/images/project-photo-3.jpeg")';
-  image_box_1.style.backgroundSize = 'cover';
+all_modal_image_boxes.forEach(function(modal_image_box, modal_box_index) {
+  var circles_box = modal_image_box.querySelectorAll(".circle");
+
+  circles_box.forEach(function(circle_box, index) {
+    circle_box.addEventListener("click", function() {
+      circles_box.forEach(function(element) {
+        if (element.classList.contains('circle_active')) {
+          element.classList.remove('circle_active');
+        }
+      });
+      circle_box.classList.add("circle_active");
+
+      switch(index) {
+        case 0:
+          modal_image_box.style.backgroundImage = 'url('+image_path+images_modals[modal_box_index][0]+')';
+          break;
+        case 1:
+          modal_image_box.style.backgroundImage = 'url('+image_path+images_modals[modal_box_index][1]+')';
+          break;
+        case 2:
+          modal_image_box.style.backgroundImage = 'url('+image_path+images_modals[modal_box_index][2]+')';
+          break;
+        default:
+          modal_image_box.style.backgroundImage = 'url('+image_path+images_modals[modal_box_index][0]+')';
+          break;
+      }
+    });
+  });
 });
