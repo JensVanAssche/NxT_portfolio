@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    wdith: 100%;
 
     .section-reverse {
         flex-direction: row-reverse;
@@ -15,10 +16,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70%;
+        width: 50%;
+        margin-bottom: 250px;
     
         .section-text {
-            width: 50%;
+            width: 60%;
             z-index: 1;
             padding: 0 20px;
             display: block;
@@ -42,6 +44,7 @@
             font-size: 30em;
             font-family: "Montserrat_ExtraBold_Italic";
             display: inline-block;
+            line-height: 0.75em;
         }
     }
 }
@@ -59,16 +62,24 @@
 @media screen and (max-width: 1024px) {
     .about-section-year {
         flex-direction: column-reverse !important;
+        width: 80% !important;
 
-        .year-number {
-            width: 100% !important;
-            text-align: center;
+        .section-text {
+            width: 80% !important;
+
+            .year-number {
+                width: 100% !important;
+                text-align: center;
+            }
         }
     }
 }
 
 @media screen and (max-width: 600px) {
+    .about-section-year {
+        width: 90% !important;
+    }
     .section-text {
-        width: 70% !important;
+        width: 90% !important;
     }
 }

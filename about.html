@@ -62,6 +62,7 @@
 	<script src="src/js/jquery.min.js"></script>
 	<script src="src/js/three.r92.min.js"></script>
 	<script src="src/js/vanta.waves.min.js"></script>
+	<script src="src/js/tilt.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
 			$("#pageloader").addClass("inactive_animate");
@@ -75,7 +76,15 @@
 			waveHeight: 40.00,
 			waveSpeed: 0.80,
 			zoom: 1
-		})
+		});
+
+		VanillaTilt.init(document.querySelectorAll(".about-section-year"), {
+			max: 10,
+			speed: 800,
+			reverse: true,
+			scale: 1.05,
+			glare: false
+		});
 	</script>
 </body>
 </html>
