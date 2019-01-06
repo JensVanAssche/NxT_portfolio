@@ -10,3 +10,11 @@ $("#nav_showcase").click(function() {
 		window.location.href = "showcase.html";
 	}, 1000);
 });
+
+// on about click
+$("#nav_about").click(function() {
+	$("#pageloader").addClass("active_animate");
+	setTimeout(function() {
+		window.location.href = "about.html";
+	}, 1000);
+});

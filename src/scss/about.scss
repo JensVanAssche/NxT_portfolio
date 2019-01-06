@@ -1,0 +1,74 @@
+.about-sections {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .section-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .section-direction {
+        flex-flow: row wrap;
+    }
+
+    .about-section-year {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    
+        .section-text {
+            width: 50%;
+            z-index: 1;
+            padding: 0 20px;
+            display: block;
+
+            .text-title {
+                font-size: 4em;
+                text-align: left;
+                margin-bottom: 0;
+                font-family: "Montserrat_ExtraBold_Italic";
+            }
+            .text-body {
+                text-align: left;
+                font-size: 1.2em
+            }
+            .margin-left {
+                margin-left: 50px;
+            }
+        }
+
+        .year-number {
+            font-size: 30em;
+            font-family: "Montserrat_ExtraBold_Italic";
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 1424px) {
+    .section-reverse {
+        flex-direction: row !important;
+    }
+
+    .year-number {
+        font-size: 20em !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-section-year {
+        flex-direction: column-reverse !important;
+
+        .year-number {
+            width: 100% !important;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-text {
+        width: 70% !important;
+    }
+}

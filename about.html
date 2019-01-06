@@ -9,21 +9,73 @@
 	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-	<style type="text/css">
-		body {
-			color: white;
+	<style>
+		#waves {
+			position: fixed;
+            opacity: 0.5;
 		}
 	</style>
 </head>
 <body>
-	<div class="subpage">
-		<h1>About</h1>
-		<i class="fas fa-times closepage"></i>
+	<div id="waves"></div>
+	<div id="pageloader" class="active"></div>
+	<div class="subpage about">
+		<div class="subpage_header">
+			<div id="waves"></div>
+			<h1 class="about-h1">About</h1>
+		</div>
+		<div class="subpage_main">
+			<div class="about-sections">
+	            <div class="about-section-year section-direction">
+	                <div class="section-text">
+	                    <h2 class="text-title">Eerste jaar</h2>
+	                    <p class="text-body margin-left">In het eerste jaar leg je de basis van je toekomst. Op het programma staan zowel technologische als creatieve vakken. In de vele projectweken leer je de verschillende bouwstenen van de multimediawereld kennen.</p>
+	                </div>
+	                <span class="year-number">1</span>
+	            </div>
+	            <div class="about-section-year section-reverse">
+	                <div class="section-text">
+	                    <h2 class="text-title">Tweede jaar</h2>
+	                    <p class="text-body margin-left">In het tweede en derde jaar (‘advanced programme’) geef je je studie een eigen accent. Ga je voor een technologisch of creatief profiel, of voor een mix van beide? Je ontdekt je talenten, en doet er iets mee. Je docenten coachen je in je keuzeproces: samen stel je het vakkenpakket voor je majorprofiel op.</p>
+	                </div>
+	                <span class="year-number">2</span>
+	            </div>
+	            <div class="about-section-year section-direction">
+	                <div class="section-text">
+	                    <h2 class="text-title">Derde jaar</h2>
+	                    <p class="text-body margin-left">In het derde jaar werk je je major profile af. Dit combineer je met een minor profile of een eigen keuze uit de ‘elective profile’-vakken. Daarnaast volg je een stage en maak je een bachelorproject.</p>
+	                </div>
+	                <span class="year-number">3</span>
+	            </div>
+        	</div>
+		</div>
+	</div>
+
+	<div class="scroll-downs">
+		<div class="mousey">
+			<div class="scroller"></div>
+		</div>
+		<p>Scroll down</p>
 	</div>
 
 
-
 	<script src="src/js/jquery.min.js"></script>
-	<script src="src/js/main.js"></script>
+	<script src="src/js/three.r92.min.js"></script>
+	<script src="src/js/vanta.waves.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			$("#pageloader").addClass("inactive_animate");
+			$("#pageloader").removeClass("active");
+		}
+
+		VANTA.WAVES({
+			el: "#waves",
+			color: 0x9,
+			shininess: 40.00,
+			waveHeight: 40.00,
+			waveSpeed: 0.80,
+			zoom: 1
+		})
+	</script>
 </body>
 </html>

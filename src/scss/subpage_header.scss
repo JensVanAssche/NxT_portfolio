@@ -20,17 +20,31 @@
         white-space: nowrap;
         
        
+         
+    }
+    .showcase-h1 {
         animation: 
-        typing 1.5s steps(8, end) both,
+        typing_showcase 1.5s steps(8, end) both,
         blink-caret .9s step-end infinite;
-        animation-delay: 1.2s; 
+        animation-delay: 1.2s;
+    }
+    .about-h1 {
+        animation: 
+        typing_about 1.5s steps(5, end) both,
+        blink-caret .9s step-end infinite;
+        animation-delay: 1.2s;
     }
 }
 
 
-@keyframes typing {
+@keyframes typing_showcase {
     from { width: 0 }
     to { width: 900px }
+}
+
+@keyframes typing_about {
+    from { width: 0 }
+    to { width: 560px }
 }
 
 
