@@ -12,18 +12,22 @@
         flex-flow: row wrap;
     }
 
+    .about-padding-bottom {
+        margin-bottom: 250px;
+    }
+
     .about-section-year {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 50%;
-        padding-bottom: 250px;
     
         .section-text {
             width: 60%;
             z-index: 1;
             padding: 0 20px;
             display: block;
+            margin-top: 10px;
 
             .text-title {
                 font-size: 4em;
@@ -43,16 +47,16 @@
         .year-number {
             font-size: 30em;
             font-family: "Montserrat_ExtraBold_Italic";
-            display: inline-block;
+            display: block !important;
             line-height: 0.75em;
         }
     }
 
     .about-bottom-text {
         font-size: 1.2em;
-        padding-bottom: 250px;
         text-align: center;
         width: 80%;
+        padding: 100px 0 50px 0;
 
         a {
             color: white;
