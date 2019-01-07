@@ -47,6 +47,7 @@
 	                </div>
 	                <span class="year-number">3</span>
 	            </div>
+	            <p class="about-bottom-text">Meer info over onze opleiding kan je vinden op de <a class="link-about" href="https://www.kdg.be/multimedia-technology">KdG Website</a>.</p>
         	</div>
 		</div>
 	</div>
@@ -84,6 +85,23 @@
 			reverse: true,
 			scale: 1.05,
 			glare: false
+		});
+
+		$(window).scroll(function(){
+			if ($(window).width() > 1024){	
+				var yearSections = document.getElementsByClassName('about-section-year');
+				var textSections = document.getElementsByClassName('section-text');
+				var yearNumbers = document.getElementsByClassName('year-number');
+
+				$(".scroll-downs").addClass("hidden");
+
+				for (var i=0; i < yearSections.length; i++) {
+					yearSection = $(yearSections[i]);
+					offset = yearSection.offset();
+					$(textSections[i]).css({"margin-top":(-(offset.top - $(document).scrollTop())/3) + "px"});
+					//$(yearNumbers[i]).css({"padding-bottom":(-(offset.top - $(document).scrollTop())/3) + "px"});
+				}
+			}
 		});
 	</script>
 </body>

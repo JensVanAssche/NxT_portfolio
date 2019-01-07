@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    wdith: 100%;
+    width: 100%;
 
     .section-reverse {
         flex-direction: row-reverse;
@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
         width: 50%;
-        margin-bottom: 250px;
+        padding-bottom: 250px;
     
         .section-text {
             width: 60%;
@@ -33,7 +33,7 @@
             }
             .text-body {
                 text-align: left;
-                font-size: 1.2em
+                font-size: 1.2em;
             }
             .margin-left {
                 margin-left: 50px;
@@ -46,6 +46,54 @@
             display: inline-block;
             line-height: 0.75em;
         }
+    }
+
+    .about-bottom-text {
+        font-size: 1.2em;
+        padding-bottom: 250px;
+        text-align: center;
+        width: 80%;
+
+        a {
+            color: white;
+            position: relative;
+            margin-bottom: 0;
+            text-decoration: none;
+
+            &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 5px;
+            top: 50%;
+            margin-top: -0.5px;
+            background: #293699; //kleur lijntje
+            }
+
+            &:before {
+                left: -5px;
+            }
+
+            &:after {
+                right: -5px;
+                transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:before {
+                width: calc(100% + 10px);
+                transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:after {
+                background: transparent;
+                width: calc(100% + 10px);
+                transition: 0s;
+            }
+        }
+        /*
+        a:hover {
+            background-color: #293699;
+        }*/
     }
 }
 
