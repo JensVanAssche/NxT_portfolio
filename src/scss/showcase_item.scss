@@ -1,17 +1,27 @@
+.pointer {
+    cursor: pointer;
+}
+
 .showcase-element {
     display: flex;
     width: 60%;
     flex-flow: column wrap;
-    margin: 50px 0;
+    padding: 50px 0;
     transform-style: preserve-3d;
-    cursor: pointer;
 
     h2 {
         font-family: "Montserrat_ExtraBold_Italic";
-        font-size: 4em;
         text-shadow: 4px 4px 4px #464646;
         position: relative;
         margin-bottom: 0;
+    }
+
+    .h2-3em {
+        font-size: 3em;
+    }
+
+    .h2-4em {
+        font-size: 4em;
 
         &:before, &:after {
             content: '';
@@ -59,17 +69,17 @@
 
 .showcase-element-text-left {
 	position: relative;
-    bottom: 100px;
+    bottom: 200px;
     left: -600px;
     transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
 }
 
 .showcase-element-text-right {
 	position: relative;
-    bottom: 100px;
+    bottom: 200px;
     left: 600px;
     transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
-    max-width: 50%;
+    max-width: 70%;
     transition: transform 600ms ease-in-out 0s;
 }
 
@@ -93,4 +103,8 @@
     left: -15%;
     transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
     background-color: rgba($color: #282828, $alpha: 0.75);
+}
+
+.showcase-element-img {
+    max-width: 640px;
 }
