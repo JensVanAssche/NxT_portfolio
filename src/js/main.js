@@ -18,3 +18,11 @@ $("#nav_about").click(function() {
 		window.location.href = "about.html";
 	}, 1000);
 });
+
+// on profiles click
+$("#nav_profiles").click(function() {
+	$("#pageloader").addClass("active_animate");
+	setTimeout(function() {
+		window.location.href = "profiles.html";
+	}, 1000);
+});
