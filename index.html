@@ -14,6 +14,11 @@
             opacity: 0.5;
 		}
 	</style>
+	
+	<audio autoplay id="bgAudio" loop>
+  <source src="src/audio/bgMusic2.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
 </head>
 <body>
 	<div class="viewport">
@@ -88,6 +93,10 @@
 			reverse: true,
 			scale: 1.1,
 		});
+        
+  var audio = document.getElementById("bgAudio");
+  audio.volume = 0.2;
+
 	</script>
 </body>
 </html>
