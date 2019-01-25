@@ -46,7 +46,9 @@ $(window).on('mousewheel', function(e){
     	}
     }
 
-    // set the main logo style
+
+	// set the main logo style
+	$( "#mainlogo" ).stop();
 	$( "#mainlogo" ).animate({
 		opacity: scale
 	}, 100, function() {
