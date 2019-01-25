@@ -47,8 +47,11 @@ $(window).on('mousewheel', function(e){
     }
 
     // set the main logo style
-    var newScale = 'scale(' + scale + ')';
-    $("#mainlogo").css({'transform': newScale, 'opacity': scale});
+	$( "#mainlogo" ).animate({
+		opacity: scale
+	}, 100, function() {
+		// Animation complete.
+	});
 
     // set the nav style
     var newLeft = left + 'px';
