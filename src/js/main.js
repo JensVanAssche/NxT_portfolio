@@ -27,7 +27,3 @@ $("#nav_profiles").click(function() {
 	}, 1000);
 });
 
-$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });
