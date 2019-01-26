@@ -2,6 +2,44 @@
     cursor: pointer;
 }
 
+.filter-btns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+
+    .filter-title {
+        user-select: none;
+        transform: skewX(-10deg);
+        -o-transform: skewX(-10deg);
+       -moz-transform: skewX(-10deg);
+        -webkit-transform: skewX(-10deg);
+        padding: 10px;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 15px;
+    }
+    
+    .filter-button {
+        margin: 10px;
+        opacity: 0.5;
+        cursor: pointer;
+        user-select: none;
+        transform: skewX(-10deg);
+        -o-transform: skewX(-10deg);
+       -moz-transform: skewX(-10deg);
+        -webkit-transform: skewX(-10deg);
+        background-color: #303030;
+        padding: 10px;
+    }
+    .filter-button.setfilter {
+        opacity: 0.99;
+    }
+}
+
 .showcase-element {
     display: flex;
     width: 60%;
@@ -9,73 +47,91 @@
     padding: 50px 0;
     transform-style: preserve-3d;
 
-    h2 {
-        font-family: "Montserrat_ExtraBold_Italic";
-        text-shadow: 4px 4px 4px #464646;
-        position: relative;
-        margin-bottom: 0;
+    .showcase-element-img {
+        max-width: 640px;
     }
 
-    .h2-3em {
-        font-size: 3em;
-    }
+    .showcase-text {
+        margin-top: -69px;
 
-    .h2-4em {
-        font-size: 4em;
-
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            width: 0%;
-            height: 10px;
-            top: 50%;
-            margin-top: -0.5px;
-            background: #293699; //kleur lijntje
+        h2 {
+            font-family: "Montserrat_ExtraBold_Italic";
+            text-shadow: 4px 4px 4px #464646;
+            position: relative;
+            margin-bottom: 0;
         }
 
-        &:before {
-            left: -20px;
+        .h2-3em {
+            font-size: 3em;
         }
 
-        &:after {
-            right: -20px;
-            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
-        
-        &:hover:before {
-            width: calc(100% + 40px);
-            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
-        
-        &:hover:after {
-            background: transparent;
-            width: calc(100% + 40px);
-            transition: 0s;
-        }
-    }
+        .h2-4em {
+            font-size: 4em;
 
-    p {
-        font-size: 1.5em;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 10px;
+                top: 50%;
+                margin-top: -0.5px;
+                background: #293699; //kleur lijntje
+            }
+
+            &:before {
+                left: -20px;
+            }
+
+            &:after {
+                right: -20px;
+                transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:before {
+                width: calc(100% + 40px);
+                transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:after {
+                background: transparent;
+                width: calc(100% + 40px);
+                transition: 0s;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .tag-box {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-left: 20px;
+
+            .tag {
+                padding: 0 10px;
+            }
+        }
     }
 }
 
 .showcase-element-left {
-	align-items: flex-start;
+    align-items: flex-start;
 }
 
 .showcase-element-right {
-	align-items: flex-end;
+    align-items: flex-end;
 }
 
 .showcase-element-text-left {
-	position: relative;
+    position: relative;
     bottom: 200px;
     left: -600px;
     transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
 }
 
 .showcase-element-text-right {
-	position: relative;
+    position: relative;
     bottom: 200px;
     left: 600px;
     transform: translateZ(125px); /* 125px zodat img niet over text komt bij tilt */
@@ -103,8 +159,4 @@
     left: -15%;
     transform: translateZ(-125px); /* 125px zodat img niet onder background komt bij tilt */
     background-color: rgba($color: #282828, $alpha: 0.75);
-}
-
-.showcase-element-img {
-    max-width: 640px;
 }
