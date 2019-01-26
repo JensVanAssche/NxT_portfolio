@@ -48,16 +48,10 @@ $(window).on('mousewheel', function(e){
 
 
 	// set the main logo style
-	$( "#mainlogo" ).stop();
-	$( "#mainlogo" ).animate({
-		opacity: scale
-	}, 100, function() {
-		// Animation complete.
-	});
+	$("#mainlogo").css({'transform': 'scale(' + scale + ')', 'opacity': scale});
 
     // set the nav style
-    var newLeft = left + 'px';
-    $("nav").css({'left': newLeft});
+	$("nav").css({'left': left + 'px'});
 });
 
 $(window).on('resize', function(e){

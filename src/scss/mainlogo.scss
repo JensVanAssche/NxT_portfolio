@@ -6,54 +6,57 @@
 	top: calc(45% - 200px);
 	cursor: default;
 
-	transform-style: preserve-3d;
+	transition: 0.5s cubic-bezier(0.1, 0.1, 0.15, 1);
 
-	&>div {
-		position: relative;
-	}
+	#mainlogo_inner {
+		transform-style: preserve-3d;
+		& > div {
+			position: relative;
+		}
 
-	h1 {
-		color: #fff;
-		font-family: 'Montserrat_ExtraBold_Italic';
-		margin: 0;
-		font-size: 15em;
-		text-align: center;
+		h1 {
+			color: #fff;
+			font-family: 'Montserrat_ExtraBold_Italic';
+			margin: 0;
+			font-size: 15em;
+			text-align: center;
 
-		transform: translateZ(50px);
-		animation: logo 0.1s both;
-		animation-delay: 3s;
-	}
+			transform: translateZ(50px);
+			animation: logo 0.1s both;
+			animation-delay: 3s;
+		}
 
-	h2 {
-		color: #fff;
-		font-family: 'Montserrat_ExtraBold_Italic';
-		margin: 0;
-        margin-right: 1.8em;
-		font-size: 2.8em;
-		text-align: center;
-		animation: logo 0.1s both;
-		animation-delay: 3.2s;
-	}
+		h2 {
+			color: #fff;
+			font-family: 'Montserrat_ExtraBold_Italic';
+			margin: 0;
+			margin-right: 1.8em;
+			font-size: 2.8em;
+			text-align: center;
+			animation: logo 0.1s both;
+			animation-delay: 3.2s;
+		}
 
-	.swipebox {
-		background-color: #293699;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 100%;
-		bottom: 0;
-		z-index: 1;
-		transform: translateZ(50px);
-	}
+		.swipebox {
+			background-color: #293699;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 100%;
+			bottom: 0;
+			z-index: 1;
+			transform: translateZ(50px);
+		}
 
-	.swipebox1 {
-		animation: boxSwipe 1s both;
-		animation-delay: 2.5s;
-	}
+		.swipebox1 {
+			animation: boxSwipe 1s both;
+			animation-delay: 2.5s;
+		}
 
-	.swipebox2 {
-		animation: boxSwipe 1s both;
-		animation-delay: 2.7s;
+		.swipebox2 {
+			animation: boxSwipe 1s both;
+			animation-delay: 2.7s;
+		}
 	}
 }
 

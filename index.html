@@ -18,7 +18,7 @@
 <body>
 	<div class="kdglogo">
 		<a href="https://www.kdg.be/multimedia-technology" target="_blank">
-		<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
+			<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
 		</a>
 	</div>
 	<div class="viewport">
@@ -52,13 +52,15 @@
 		<div id="waves"></div>
 
 		<div id="mainlogo">
-			<div>
-				<div class="swipebox swipebox1"></div>
-				<h1>NxT</h1>
-			</div>
-			<div>
-				<div class="swipebox swipebox2"></div>
-				<h2>Media Technology</h2>
+			<div id="mainlogo_inner">
+				<div>
+					<div class="swipebox swipebox1"></div>
+					<h1>NxT</h1>
+				</div>
+				<div>
+					<div class="swipebox swipebox2"></div>
+					<h2>Media Technology</h2>
+				</div>
 			</div>
 		</div>
 
@@ -87,17 +89,11 @@
 			zoom: 1
 		})
 
-		VanillaTilt.init(document.querySelector("#mainlogo"), {
+		VanillaTilt.init(document.querySelector("#mainlogo_inner"), {
 			max: 30,
 			speed: 800,
 			reverse: true,
 			scale: 1.1,
-		});
-
-		// in production
-		var audio = document.getElementById('audio');
-		$(function() {
-			audio.play();
 		});
 	</script>
 </body>

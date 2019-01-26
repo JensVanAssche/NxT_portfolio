@@ -1,6 +1,6 @@
 // main logo glitch effect
-$("#mainlogo div:first-child").append("<div class='glitch-window'></div>");
-$("#mainlogo h1").clone().appendTo(".glitch-window");
+$("#mainlogo_inner div:first-child").append("<div class='glitch-window'></div>");
+$("#mainlogo_inner h1").clone().appendTo(".glitch-window");
 
 
 // on showcase click
