@@ -17,42 +17,44 @@
 	</style>
 </head>
 <body>
-
 	<div id="waves"></div>
 	<div id="pageloader" class="active"></div>
 	<div class="subpage about">
-	<div class="kdglogo">
-	<a href="https://www.kdg.be/multimedia-technology" target="_blank">
-	<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
-    </a>
-	</div>
-	<div class="button_container" id="toggle">
-  <span class="top"></span>
-  <span class="middle"></span>
-  <span class="bottom"></span>
-</div>
+		<div class="kdglogo">
+			<a href="https://www.kdg.be/multimedia-technology" target="_blank">
+				<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
+			</a>
+		</div>
+		
+		<div class="button_container" id="toggle">
+			<span class="top"></span>
+			<span class="middle"></span>
+			<span class="bottom"></span>
+		</div>
 
-<div class="overlay" id="overlay">
-  <div class="page_nav">
-			<div class="nav-links">
-				<div class="nav-link">
-					<a href="index.html">HOME</a>
-				</div>
-				<div class="nav-link">
-					<a href="about.html">ABOUT</a>
-				</div>
-				<div class="nav-link">
-					<a href="profiles.html">PROFILES</a>
-				</div>
-				<div class="nav-link">
-					<a href="showcase.html">SHOWCASE</a>
+		<div class="overlay" id="overlay">
+			<div class="page_nav">
+				<div class="nav-links">
+					<div class="nav-link">
+						<a href="index.html">HOME</a>
+					</div>
+					<div class="nav-link">
+						<a href="about.html">ABOUT</a>
+					</div>
+					<div class="nav-link">
+						<a href="profiles.html">PROFILES</a>
+					</div>
+					<div class="nav-link">
+						<a href="showcase.html">SHOWCASE</a>
+					</div>
 				</div>
 			</div>
 		</div>
-</div>
+
 		<div class="subpage_header">
 			<h1 class="about-h1">About</h1>
 		</div>
+
 		<div class="subpage_main">
 			<div class="about-sections">
 	            <div class="about-section-year about-padding-bottom section-direction">
@@ -101,6 +103,7 @@
 	<script src="src/js/three.r92.min.js"></script>
 	<script src="src/js/vanta.waves.min.js"></script>
 	<script src="src/js/tilt.js"></script>
+	<script src="src/js/main.min.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
 			$("#pageloader").addClass("inactive_animate");
@@ -139,11 +142,6 @@
 					//$(yearNumbers[i]).css({"padding-bottom":(-(offset.top - $(document).scrollTop())/3) + "px"});
 				}
 			}
-		});
-
-		$('#toggle').click(function() {
-			$(this).toggleClass('active');
-			$('#overlay').toggleClass('open');
 		});
 	</script>
 </body>
