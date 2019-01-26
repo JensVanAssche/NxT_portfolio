@@ -15,12 +15,25 @@
             opacity: 0.5;
 		}
 	</style>
+	<script type="text/javascript">
+	    $('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+	</script>
 </head>
 <body>
 	<div id="waves"></div>
 	<div id="pageloader" class="active"></div>
 	<div class="subpage about">
-		<div class="page_nav">
+	<div class="button_container" id="toggle">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="page_nav">
 			<div class="nav-links">
 				<div class="nav-link">
 					<a href="index.html">HOME</a>
@@ -36,6 +49,7 @@
 				</div>
 			</div>
 		</div>
+</div>
 		<div class="subpage_header">
 			<h1 class="about-h1">About</h1>
 		</div>
