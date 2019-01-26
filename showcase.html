@@ -300,6 +300,11 @@
 				$(rightBackgrounds[i]).css({"margin-right":(-(offset.top - $(document).scrollTop())/10) + "px"});
 			}
 		});
+
+		$('#toggle').click(function() {
+			$(this).toggleClass('active');
+			$('#overlay').toggleClass('open');
+		});
 	</script>
 </body>
 </html>

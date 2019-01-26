@@ -14,17 +14,17 @@
             opacity: 0.5;
 		}
 	</style>
-	
-	<audio autoplay id="bgAudio" loop>
-  <source src="src/audio/bgMusic2.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
 </head>
 <body>
-<div class="kdglogo">
-	<a href="https://www.kdg.be/multimedia-technology" target="_blank">
-	<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
-    </a>
+	<audio id='audio'>
+		<source src="./src/audio/bgMusic2.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+
+	<div class="kdglogo">
+		<a href="https://www.kdg.be/multimedia-technology" target="_blank">
+		<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
+		</a>
 	</div>
 	<div class="viewport">
 		<div id="loading">
@@ -98,10 +98,11 @@
 			reverse: true,
 			scale: 1.1,
 		});
-        
-  var audio = document.getElementById("bgAudio");
-  audio.volume = 0.2;
 
+		var audio = document.getElementById('audio');
+		$(function() {
+			audio.play();
+		});
 	</script>
 </body>
 </html>
