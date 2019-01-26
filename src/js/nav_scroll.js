@@ -23,7 +23,7 @@ $(window).on('mousewheel', function(e){
     		$(".scroll-downs").addClass("hidden");
     	}
 
-		if (navRight < -200) {
+		if (navRight < 0) {
 			left -= leftInterval;
 		}
     }
