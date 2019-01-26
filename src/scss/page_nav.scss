@@ -1,5 +1,5 @@
 $color-background: #F5F5F5;
-$color-main: #FF5252;
+$color-main: #030303;
 $color-active: #FFF;
 $color-link: #FFF;
 
@@ -139,8 +139,8 @@ $button-width: 35px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    
-    font-weight: 400;
+    font-family: "Montserrat_Bold";
+    font-weight: 900;
     text-align: center;
     z-index: 100;
 }
@@ -165,24 +165,38 @@ $button-width: 35px;
         color: $color-link;
         text-decoration: none;
         overflow: hidden;
+                
+                &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 10px;
+                top: 50%;
+                margin-top: -0.5px;
+                background: #293699; //kleur lijntje
+            }
+
+            &:before {
+                left: -20px;
+            }
+
+            &:after {
+                right: -20px;
+                transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:before {
+                width: calc(100% + 40px);
+                transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+            
+            &:hover:after {
+                background: transparent;
+                width: calc(100% + 40px);
+                transition: 0s;
+            }
         
-        &:hover:after,
-         &:focus:after,
-         &:active:after {
-           width: 100%;
-         }
-        
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          transform: translateX(-50%);
-          height: 3px;
-          background: $color-link;
-          transition: .35s;
-        }
+      
       }
 		}
 	}
