@@ -26,3 +26,8 @@ $("#nav_profiles").click(function() {
 		window.location.href = "profiles.html";
 	}, 1000);
 });
+
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
