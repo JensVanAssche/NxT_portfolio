@@ -11,6 +11,7 @@ $("#nav_showcase").click(function() {
 	}, 1000);
 });
 
+
 // on about click
 $("#nav_about").click(function() {
 	$("#pageloader").addClass("active_animate");
@@ -18,6 +19,7 @@ $("#nav_about").click(function() {
 		window.location.href = "about.html";
 	}, 1000);
 });
+
 
 // on profiles click
 $("#nav_profiles").click(function() {
@@ -27,3 +29,9 @@ $("#nav_profiles").click(function() {
 	}, 1000);
 });
 
+
+// on nav icon click
+$('#toggle').click(function() {
+	$('#toggle').toggleClass('active');
+	$('#overlay').toggleClass('open');
+});
