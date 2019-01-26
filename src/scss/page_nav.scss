@@ -7,7 +7,14 @@ $button-height: 27px;
 $button-width: 35px;
 
 
-
+.kdglogo {
+  position: fixed;
+  top: 5%;
+  left: 2%;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
 .button_container {
   position: fixed;
   top: 5%;
@@ -132,7 +139,7 @@ $button-width: 35px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: 'Vollkorn', serif;
+    
     font-weight: 400;
     text-align: center;
     z-index: 100;
@@ -193,7 +200,7 @@ $button-width: 35px;
 }
 
 
-
+/*
 @media screen and (min-width: 1024px) {
     .nav-link {
         width: 256px;
@@ -228,4 +235,4 @@ $button-width: 35px;
 		    }
 	    }
 	}
-}
+} */
