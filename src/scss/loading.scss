@@ -10,8 +10,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: fade 1s both;
-	animation-delay: 1.5s;
 
 	div {
 	  color: #fff;
@@ -40,6 +38,10 @@
 	.preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
 	.preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
 	.preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+
+	&.hidden {
+		animation: fade 1s both;
+	}
 }
 
 @keyframes fade {

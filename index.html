@@ -18,9 +18,35 @@
 <body>
 	<div class="kdglogo">
 		<a href="https://www.kdg.be/multimedia-technology" target="_blank">
-			<img src="src/images/logo_kdg.png" alt="KDG logo" width="220">
+			<img src="src/images/logo_kdg.png" alt="KDG logo">
 		</a>
 	</div>
+
+	<div class="button_container button_home" id="toggle">
+		<span class="top"></span>
+		<span class="middle"></span>
+		<span class="bottom"></span>
+	</div>
+
+	<div class="overlay" id="overlay">
+		<div class="page_nav">
+			<div class="nav-links">
+				<div class="nav-link">
+					<a href="index.html">HOME</a>
+				</div>
+				<div class="nav-link">
+					<a href="about.html">ABOUT</a>
+				</div>
+				<div class="nav-link">
+					<a href="profiles.html">PROFILES</a>
+				</div>
+				<div class="nav-link">
+					<a href="showcase.html">SHOWCASE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="viewport">
 		<div id="loading">
 			<div class="preloader-1">
@@ -80,6 +106,10 @@
 	<script rel="preload" src="src/js/nav_scroll.min.js"></script>
 	<script rel="preload" src="src/js/main.min.js"></script>
 	<script rel="preload">
+		$(document).ready(function() {
+			$("#loading").addClass("hidden");
+		})
+ 
 		VANTA.WAVES({
 			el: "#waves",
 			color: 0x9,

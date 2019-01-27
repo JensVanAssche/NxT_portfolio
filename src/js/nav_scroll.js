@@ -58,6 +58,8 @@ $(window).on('resize', function(e){
 	left = ($(window).width() - 275);
 	startLeft = left;
 	scale = 1;
+	scaleThreshold = startLeft - (leftInterval * 8);
+
 	$("#mainlogo").css({'transform': "scale(1)", 'opacity': 1});
 	$("#hoverlock").removeClass("active");
 	$("nav").css({'left': left});
