@@ -1,5 +1,4 @@
 var allShowcaseElements = document.querySelectorAll(".showcase-element");
-var webDevElements = document.querySelectorAll(".web-dev");
 var filterButtons = document.getElementsByClassName("filter-button");
 
 document.getElementById('web-dev').addEventListener("click", function(){ toggleFilter("web-dev"); });
@@ -13,35 +12,32 @@ document.getElementById('video').addEventListener("click", function(){ toggleFil
 document.getElementById('article').addEventListener("click", function(){ toggleFilter("article"); });
 
 function toggleFilter(tag) {
+	var unclick = false;
 	for(var i=0; i<filterButtons.length; i++) {
 		if(filterButtons[i].classList.contains('setfilter')) {
 			filterButtons[i].classList.remove('setfilter');
+			
+			if(filterButtons[i].id == tag) {
+				unclick = true;
+			}
 		}
 	}
-	document.getElementById(tag).classList.toggle("setfilter");
-	var filterClass = "." + tag;
-	var filterElements = document.getElementsByClassName(tag);
-/*
-	for(var i=filterElements.length; i>0; i--) {
-		filterElements[i-1].style.order = -1//(filterElements-1) * (-1);
-	}*/
-	for(var i=0; i<allShowcaseElements.length; i++) {
-		allShowcaseElements[i].style.order = 0;//(filterElements-1) * (-1);
-	}
+	if(unclick == false) {
+		document.getElementById(tag).classList.toggle("setfilter");
+		var filterClass = "." + tag;
+		var filterElements = document.getElementsByClassName(tag);
 
-	for(var i=0; i<filterElements.length; i++) {
-		filterElements[i].style.order = -1;//(filterElements-1) * (-1);
+		for(var i=0; i<allShowcaseElements.length; i++) {
+			allShowcaseElements[i].style.display = "none";
+		}
+
+		for(var i=0; i<filterElements.length; i++) {
+			filterElements[i].style.display = "flex";
+		}
+	}
+	else {
+		for(var i=0; i<allShowcaseElements.length; i++) {
+			allShowcaseElements[i].style.display = "flex";
+		}
 	}
 }
-
-allShowcaseElements.forEach(function(element) {
-	element.style.order = 0;
-});
-
-webDevElements.forEach(function(element, index) {
-	//element.style.order = (index+1) * (-1);
-});/*
-var webDevElementsLenght = webDevElements.length;
-for(var i=webDevElementsLenght; i>0; i--) {
-	webDevElements[i-1].style.order = (webDevElementsLenght-1) * (-1);
-}*/
