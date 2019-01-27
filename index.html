@@ -119,12 +119,14 @@
 			zoom: 1
 		})
 
-		VanillaTilt.init(document.querySelector("#mainlogo_inner"), {
-			max: 30,
-			speed: 800,
-			reverse: true,
-			scale: 1.1,
-		});
+		if ($(window).width() > 600) {
+			VanillaTilt.init(document.querySelector("#mainlogo_inner"), {
+				max: 30,
+				speed: 800,
+				reverse: true,
+				scale: 1.1,
+			});
+		}
 	</script>
 </body>
 </html>
