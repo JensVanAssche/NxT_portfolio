@@ -9,21 +9,25 @@ $button-width: 35px;
 
 .kdglogo {
   position: fixed;
-  top: 5%;
-  left: 2%;
+  top: 30px;
+  left: 30px;
   cursor: pointer;
   z-index: 100;
   transition: opacity .25s ease;
+  img { width: 220px; }
 }
+
 .button_container {
   position: fixed;
-  top: 5%;
-  right: 2%;
+  top: 30px;
+  right: 30px;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
   z-index: 100;
   transition: opacity .25s ease;
+
+  &.button_home { display: none; }
   
   
   &:hover {
@@ -210,26 +214,5 @@ $button-width: 35px;
   100% {
     opacity: 1;
     left: 0;
-  }
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-    body {
-        
-    }
-  }
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-    
   }
 }

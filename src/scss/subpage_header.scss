@@ -20,9 +20,6 @@ $h1-mobile: 3em;
         overflow: hidden;
         border-right: .15em solid #293699;
         white-space: nowrap;
-        
-       
-         
     }
     .showcase-h1 {
         animation: 
@@ -67,37 +64,74 @@ $h1-mobile: 3em;
     50% { border-color: #293699; }
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  body {
-      h1{
-          font-size: $h1-mobile;
-      }
-    .showcase-h1 {
-        animation: none !important;
-    }
-    .about-h1 {
-        animation: animation: none !important;
+@media only screen and (max-width: 1200px) {
+    .subpage_header {
+        h1 {
+            font-size: 7.5em;
+        }
     }
 
-    .profiles-h1 {
-        animation: animation: none !important;
+    @keyframes typing_showcase {
+        from { width: 0 }
+        to { width: 700px }
     }
-      }
-  }
+    
+    @keyframes typing_about {
+        from { width: 0 }
+        to { width: 440px }
+    }
+    
+    @keyframes typing_profiles {
+        from { width: 0 }
+        to { width: 540px }
+    }
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-  }
+@media only screen and (max-width: 900px) {
+    .subpage_header {
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    @keyframes typing_showcase {
+        from { width: 0 }
+        to { width: 480px }
+    }
+    
+    @keyframes typing_about {
+        from { width: 0 }
+        to { width: 300px }
+    }
+    
+    @keyframes typing_profiles {
+        from { width: 0 }
+        to { width: 380px }
+    }
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-      h1 {
-          font-size: $h1-size;
-      }
-  }
+@media only screen and (max-width: 600px) {
+    .subpage_header {
+        margin-top: 60px;
+        height: auto;
+
+        h1 {
+            font-size: 4em;
+        }
+    }
+
+    @keyframes typing_showcase {
+        from { width: 0 }
+        to { width: 380px }
+    }
+    
+    @keyframes typing_about {
+        from { width: 0 }
+        to { width: 240px }
+    }
+    
+    @keyframes typing_profiles {
+        from { width: 0 }
+        to { width: 300px }
+    }
 }

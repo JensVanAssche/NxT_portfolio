@@ -119,14 +119,16 @@
 			zoom: 1
 		});
 
-		VanillaTilt.init(document.querySelectorAll(".about-section-year"), {
-			max: 10,
-			speed: 800,
-			reverse: true,
-			scale: 1.05,
-			glare: false
-		});
-
+		if ($(window).width() > 600) {
+			VanillaTilt.init(document.querySelectorAll(".about-section-year"), {
+				max: 10,
+				speed: 800,
+				reverse: true,
+				scale: 1.05,
+				glare: false
+			});
+		}
+		
 		$(window).scroll(function(){
 			if ($(window).width() > 1024){	
 				var yearSections = document.getElementsByClassName('about-section-year');
