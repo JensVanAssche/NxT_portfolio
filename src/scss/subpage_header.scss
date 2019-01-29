@@ -115,7 +115,7 @@
         height: auto;
 
         h1 {
-            font-size: 3.5em;
+            font-size: 3.3em;
             margin: 45vh 0 45vh 0;
             margin: 45vh 0 45vh 0;
         }
@@ -123,16 +123,16 @@
 
     @keyframes typing_showcase {
         from { width: 0 }
-        to { width: 330px }
+        to { width: 310px }
     }
     
     @keyframes typing_about {
         from { width: 0 }
-        to { width: 200px }
+        to { width: 190px }
     }
     
     @keyframes typing_profiles {
         from { width: 0 }
-        to { width: 260px }
+        to { width: 240px }
     }
 }
