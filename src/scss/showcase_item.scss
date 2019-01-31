@@ -58,6 +58,7 @@
         }
 
         h2 {
+            display: inline-block;
             font-family: "Montserrat_ExtraBold_Italic";
             text-shadow: 4px 4px 4px #464646;
             position: relative;
@@ -95,8 +96,7 @@
         }
 
         .tag-box {
-            display: flex;
-            flex-flow: row nowrap;
+            display: inline-block;
             margin-left: 20px;
 
             .tag {
@@ -118,6 +118,7 @@
     bottom: 200px;
     left: -55%;
     transform: translateZ(125px); 
+    text-align: right;
 }
 
 .showcase-element-text-right {
@@ -134,12 +135,14 @@
              width: 60%;
         }
 
-
         h2 {
         font-size: 4em;
         }
         p {
             font-size: 1.5em;
+        }
+        .h2-profiles {
+             font-size: 3em;
         }
     }
 }
@@ -164,6 +167,9 @@
         }
         p {
             font-size: 1.3em;
+        }
+        .h2-profiles {
+             font-size: 2.5em;
         }
     }
 }
@@ -199,6 +205,9 @@
             p {
                 text-align: center;
                 font-size: 1.1em;
+            }
+            .h2-profiles {
+                font-size: 2em;
             }
             .tag-box {
                 display: flex;
