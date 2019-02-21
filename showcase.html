@@ -367,14 +367,16 @@
 			waveSpeed: 0.80,
 			zoom: 1
 		})
-
-		VanillaTilt.init(document.querySelectorAll(".showcase-element-img"), {
-			max: 10,
-			speed: 800,
-			reverse: true,
-			scale: 1.05,
-			glare: true
-		});
+		
+		if ($(window).width() > 600) {
+			VanillaTilt.init(document.querySelectorAll(".showcase-element-img"), {
+				max: 10,
+				speed: 800,
+				reverse: true,
+				scale: 1.05,
+				glare: true
+			});
+		}
 
 		var $showcaseTexts = $('.showcase-text');
 		var $window = $(window);
